@@ -3,19 +3,17 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from "./App";
 import {BrowserRouter} from "react-router-dom";
-import {Provider} from "react-redux";
-import {setupStore} from "./store/store";
+import { ApiProvider } from "@reduxjs/toolkit/dist/query/react";
+import {newsAPI} from "./services/NewsService";
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
 );
 
-const store = setupStore()
-
 root.render(
-    <Provider store={store}>
+    <ApiProvider api={newsAPI}>
         <BrowserRouter>
             <App />
         </BrowserRouter>
-    </Provider>
+    </ApiProvider>
 );

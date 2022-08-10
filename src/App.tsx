@@ -2,6 +2,7 @@ import React from 'react';
 import Navigation from "./components/Navigation";
 import {Route, Routes} from "react-router-dom";
 import LatestNews from "./pages/LatestNews";
+import AdvancedSearch from "./pages/AdvancedSearch";
 
 function App() {
 
@@ -10,7 +11,7 @@ function App() {
             <Navigation />
             <Routes>
                 <Route path="/" element={<LatestNews />} />
-                <Route path="/login" />
+                <Route path="/advanced" element={<AdvancedSearch />} />
             </Routes>
         </>
     );

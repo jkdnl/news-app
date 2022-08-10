@@ -9,13 +9,15 @@ function NewsCard({data}: {data: INews}) {
                 <span className="text-indigo-800 font-bold py-2">{data.title}</span>
             </a>
             <div className="flex-col mb-4">
-                <div>{data.author}</div>
+                {!data.author.includes("<a href") &&
+                    <div>{data.author}</div>
+                }
                 <div>{data.published}</div>
             </div>
             <p className="italic">{data.description}</p>
             <span className="flex my-2 md:justify-end md:absolute md:-top-4 md:right-1">
                 {data.category.map(c => (
-                    <span className="mr-2">
+                    <span key={c} className="mr-2">
                         <Badge color="indigo">
                             {c}
                         </Badge>

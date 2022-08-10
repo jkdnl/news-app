@@ -8,7 +8,7 @@ const Navigation: FC = () => {
             <span className="text-xl font-bold">News Searcher</span>
             <div>
                 <Link className="mx-2 hover:text-amber-400" to={"/"}>Latest News</Link>
-                <Link className="ml-2 hover:text-amber-400" to={"/login"}>Log In</Link>
+                <Link className="ml-2 hover:text-amber-400" to={"/advanced"}>Advanced Search</Link>
             </div>
         </nav>
     );
